@@ -1,0 +1,10 @@
+ body('email'),trim().isEmail(),
+    body('username').trim().isLength({min:5}),
+    body('password').trim().isLength({min:3}),
+
+
+const errors=validataionResult(req);
+    console.log(errors)
+
+    
+    const { body,validataionResult } = require('express-validator'); //validataion from website
